@@ -27,11 +27,15 @@ kubectl expose pod <pod> --port=444 --name=frontend //Expose the port of a pod (
 ```
 
 ```
-kubectl port-forward  <pod> 8080 //Port forward the exposed por port to your local machine
+kubectl port-forward  <pod> 8080:3000 //Port forward the exposed por port to your local machine
 ```
 
 ```
 kubectl exec  <pod> --command //Execute a command on the pod
+```
+
+```
+kubectl describe pod <pod name>  --namespace=<namespace-name> 
 ```
 
 
