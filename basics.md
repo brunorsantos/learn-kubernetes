@@ -49,3 +49,29 @@ Get deployment history
 ```
 kubectl rollout history deployment/<deployment name> --namespace=<namespace-name>
 ```
+
+### Services
+
+ Logical bridge between the "mortal" pods and other services or end-users.
+ kubeclt expose create a service.
+ When creating a service you choose a pod by the label and inform the port of this pod you want to wrap ( by name of the port defined on the pod)
+When creating a service you need to define a port to be exposed with a type. The NodePort type can be acessed externaly 
+
+
+ Describe one service
+ ```
+ kubeclt describe svc <hello>
+ ```
+ Show all service
+ ```
+ kubeclt get svc <hello>
+ ```
+ 
+ ### Label
+ 
+ Key/values attached to objects 
+ 
+ labels can be used to services redirect requests to pods. Or label can be used to make pods only be in certain pods.
+ 
+ 
+ 
