@@ -79,7 +79,7 @@ When creating a service you need to define a port to be exposed with a type. The
  Tip: Using edit deployment we can see the specification of it:
  
  ```
- kubectl edit deployment <deployment-name> --namespace=<namespace-name>
+ kubectl edit deployment deployment/<deployment-name> --namespace=<namespace-name>
 
  ```
  
