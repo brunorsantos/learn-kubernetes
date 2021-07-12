@@ -73,15 +73,16 @@ When creating a service you need to define a port to be exposed with a type. The
  
  labels can be used to services redirect requests to pods. Or label can be used to make pods only be in certain pods.
  
- ### Healthchecks
+ ### Healthchecks (Liveness Probe)
  
  We can put into a deployment. Adding a livenessProbe into the spec. In the configuration we put a initial delay and a delay for each healthcheck. 
  Tip: Using edit deployment we can see the specification of it:
  
  ```
  kubectl edit deployment deployment/<deployment-name> --namespace=<namespace-name>
-
  ```
+ 
+ ### ReadnessProbe
  
  
  
