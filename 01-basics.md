@@ -52,9 +52,9 @@ kubectl rollout history deployment/<deployment name> --namespace=<namespace-name
 
 ### Services
 
- Logical bridge between the "mortal" pods and other services or end-users.
- kubeclt expose create a service.
- When creating a service you choose a pod by the label and inform the port of this pod you want to wrap ( by name of the port defined on the pod)
+Logical bridge between the "mortal" pods and other services or end-users.
+kubeclt expose command create a service.
+When creating a service you choose a pod by the label and inform the port of this pod you want to wrap ( by name of the port defined on the pod)
 When creating a service you need to define a port to be exposed with a type. The NodePort type can be acessed externaly 
 
 
@@ -72,6 +72,17 @@ When creating a service you need to define a port to be exposed with a type. The
  Key/values attached to objects 
  
  labels can be used to services redirect requests to pods. Or label can be used to make pods only be in certain pods.
+ 
+ ### Healthchecks
+ 
+ We can put into a deployment. Adding a livenessProbe into the spec. In the configuration we put a initial delay and a delay for each healthcheck. 
+ Tip: Using edit deployment we can see the specification of it:
+ 
+ ```
+ kubectl edit deployment <deployment-name> --namespace=<namespace-name>
+
+ ```
+ 
  
  
  
