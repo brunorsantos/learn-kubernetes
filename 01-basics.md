@@ -84,6 +84,7 @@ When creating a service you need to define a port to be exposed with a type. The
  
  ### ReadnessProbe
  
- 
+ Indicates if the container is ready to serve. It does not restart the container like que livenesse probe, just removes the ip address from the service.
+ In geneal both liveness probe and readinesse probe are configured
  
  
