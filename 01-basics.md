@@ -113,8 +113,10 @@ PodConditions:
 ![image](https://user-images.githubusercontent.com/20507162/125522986-00414580-e085-467f-86a8-d17e65d41515.png)
 
 
-InitContainer is a other container that can prepare something to the other container in the same pod, after it exectutes, the initialized conditions chance to true. Afete livenesse probe, Ready chances to true. 
+InitContainer is a other container that can prepare something to the other container in the same pod, after it exectutes, the initialized conditions chance to true. After livenesse probe, Ready chances to true. 
+
 For initContainer, there is a section on the yml file describing it
+
 In a lifecycle section when can put scripts for postStart and preStop 
 
 
