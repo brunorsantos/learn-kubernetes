@@ -82,9 +82,40 @@ When creating a service you need to define a port to be exposed with a type. The
  kubectl edit deployment deployment/<deployment-name> --namespace=<namespace-name>
  ```
  
- ### ReadnessProbe
+ ### ReadinessProbe
  
  Indicates if the container is ready to serve. It does not restart the container like que livenesse probe, just removes the ip address from the service.
- In geneal both liveness probe and readinesse probe are configured
+ In geneal both liveness probe and readiness probe are configured.
+ The readinesse probe guarantees the the pod will be READY to serve requests after the health in the pod with the delay configured in the properties pass.
  
+ ### Pod State
  
+Pods has a status field, that `kubectl get pods` shows 
+  
+Running status means that the bound has been bound to a node, all containers in the pod are created  and at least one container is running or starting/restarting
+
+Pending: Pods has been accepeted but is not running. Image can be still downloading, resouce limits...
+Succeeded: All containers are terminated and will not be restarted
+Failed: All containers are terminated and one of them returned a failure code
+
+PodConditions:
+
+- PodScheduled
+- Ready
+- Initialized
+- Unschedulable
+- ContainersReady
+
+
+### Pod Lifecycle
+
+
+![image](https://user-images.githubusercontent.com/20507162/125522986-00414580-e085-467f-86a8-d17e65d41515.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/20507162/125522591-0236c038-a1f1-47ca-bc95-dc5d4616e883.png)
+
+
+
