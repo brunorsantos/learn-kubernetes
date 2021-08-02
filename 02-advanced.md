@@ -47,3 +47,19 @@ Alem disso são criados os recursos do tipo `ingress` para direcionar para os se
 
 
 ![image](https://user-images.githubusercontent.com/20507162/127062119-67d1f490-e7ac-4675-a200-6acbab239d25.png)
+
+
+AS rules sao criadas via objetos do tipo ingress:
+
+![image](https://user-images.githubusercontent.com/20507162/127903370-c2613f08-1ced-4327-aef7-298699ba4485.png)
+
+
+O ingress controller pode ser definido normalmente com um deployment por exemplo com todos os recursos possiveis (readiness probe, liveness probe, etc)
+
+## External DNS
+
+![image](https://user-images.githubusercontent.com/20507162/127905321-a53907ad-0048-4cc1-9f73-53b41a6f9510.png)
+
+
+
+
