@@ -62,4 +62,10 @@ O ingress controller pode ser definido normalmente com um deployment por exemplo
 
 
 
+## Pod Presets
 
+Can inject information into pods ar runtime.
+
+Secrets, voumes and Environments variables
+
+We can use tags to identify pod we want to use the presets
