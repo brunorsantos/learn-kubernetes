@@ -64,8 +64,21 @@ O ingress controller pode ser definido normalmente com um deployment por exemplo
 
 ## Pod Presets
 
-Can inject information into pods ar runtime.
+Objetct from type PodPreset, Can inject information into pods ar runtime.
 
 Secrets, voumes and Environments variables
 
 We can use tags to identify pod we want to use the presets
+
+```
+kube ctl get podpresets
+```
+
+## Stateful Sets
+
+Alternative to deployments to create pods with replicas. That can keep some state and had pod name in a sequence.
+
+
+## Deamon Sets
+
+A way the keep in each node one pod used for a specific resource. Like logger agreggators, monitoring, etc
